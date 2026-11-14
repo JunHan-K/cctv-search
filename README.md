@@ -1,5 +1,7 @@
 # CCTV 검색 C 담당 구현
 
+B의 `tracks.jsonl` 대용량 입력을 이미지 배치로 바꾸는 새 처리기는 [B 검출 결과 임베딩 안내](docs/B_검출결과_임베딩.md)를 확인하세요. 제공된 Lite-DETR T3 ZIP의 `rgb` 반환 형식과 `quality.score` 없는 출력에 맞췄습니다.
+
 ## D에게 넘길 프레임 추천 함수
 
 `feature/qwen35-4b`에는 질문 임베딩 → 저장 벡터 유사도 검색 → 여러 프레임·초 추천 기능이 있습니다. D는 `rag/client.py` 한 파일을 복사해 `recommend_frames()`를 호출합니다. C의 PC에서 서버를 실행해야 하며, 다른 PC에서는 LAN/VPN 주소와 API key를 사용합니다. [연동·실행 안내](docs/D_프레임추천_연동.md)를 확인하세요.
